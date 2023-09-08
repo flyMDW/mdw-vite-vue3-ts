@@ -1,19 +1,19 @@
 import request from '@/configs/request'
 
 /**
- * @description 地址类型：1 头像（学生） 2 口语自我介绍（学生）
+ * @description
  */
-export type TutorPresignedUrlType = 3 | 4 | 5 | 6
+export type CatType = 1 | 2 | 3
 
 /**
- * 获取预签名上传地址
- * @description 上传步骤：1.取预签名上传地址 2.使用http PUT，将文件PUT到指定目录 3.上传成功后，将地址保存到指定字段
- * @param type  地址类型：1 头像（学生） 2 口语自我介绍（学生）3 头像（老师）
+ * 获取catInfo
+ * @description 获取 cat info
+ * @param type
  * @returns
  */
-export function getPresignedUrlAPI(type: TutorPresignedUrlType): Promise<string> {
+export function getCatInfoAPI(type: CatType): Promise<string> {
   return request({
-    url: 'presignedUrl',
+    url: 'getCatInfo',
     method: 'get',
     params: { type },
   })
