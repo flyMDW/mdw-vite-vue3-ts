@@ -1,3 +1,3 @@
-# template-vite-vue3-ts
+# template-flyeee
 
 This template is created during the early transition of Vue 3 and Vite.
